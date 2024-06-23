@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --pastel: #f6e9e4;
+    --gray: #242424;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    @apply font-montserrat;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f2b0a7;
+    border-radius: 0.5rem;
+}
+
+@keyframes reveal {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-reveal {
+    animation: reveal 1s ease-out;
+}
+
+@layer components {
+  .primary-button {
+    @apply  border-darkGray border bg-gradient-to-br from-[var(--primary)] to-transparent bg-[length:300%_200%] bg-[position:right_bottom] transition-all ease-in-out text-primary-foreground cursor-pointer text-base;
+  }
+  .primary-button:hover {
+    @apply text-white bg-[position:left_bottom] bg-darkGray duration-500;
+  }
+  .secondary-button {
+    @apply bg-darkGray border-darkGray border bg-gradient-to-br from-[var(--secondary)] to-transparent bg-[length:300%_200%] bg-[position:right_bottom] text-secondary transition-all ease-in-out cursor-pointer text-base;
+  }
+  .secondary-button:hover {
+      @apply text-darkGray bg-[position:left_bottom] bg-white duration-500;
+  }
+  .white-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:white;
+    transform: scaleX(0);
+    transform-origin: left bottom;
+    transition: transform 0.5s ease-out;
+    z-index: -1;
+  }
+  .white-button:hover::after {
+    transform: scaleX(1);
+    transform-origin: left bottom;
+  }
+  .white-button:hover {
+    @apply text-primary;
+  }
+}
