@@ -7,10 +7,19 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About SEA Salon
+## 📜 Installation Guide
 
-How to run this project:
-- Clone this project
+Clone this project
+```
+    git clone
+```
+
+Enter Project Directory
+```
+    cd SEA-Salon
+```
+
+Run These Commands
 - Run `composer install`
 - Run `php artisan migrate:fresh --seed`
 - Run `php artisan storage:link`
