@@ -11,12 +11,12 @@
 
 Clone this project
 ```
-    git clone
+git clone https://github.com/Wongsodillon/SEA-Salon.git
 ```
 
 Enter Project Directory
 ```
-    cd SEA-Salon
+cd SEA-Salon
 ```
 
 Run These Commands
