@@ -25,6 +25,7 @@ Run These Commands
 - Run `php artisan storage:link`
 - Run `npm install`
 - Run `npm run dev`
-- Open new terminal
+
+Open new terminal
 - Run `php artisan serve`
 - Open `localhost:8000`
