@@ -26,4 +26,4 @@ Run These Commands
 - Run `npm install`
 - Run `npm run dev`
 - Run `php artisan serve`
-- Open `localhost:8000
+- Open `localhost:8000`
