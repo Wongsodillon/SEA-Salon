@@ -27,5 +27,7 @@ Run These Commands
 - Run `npm run dev`
 
 Open new terminal
+- Run `php artisan key:generate`
+- Run `php artisan config:cache`
 - Run `php artisan serve`
 - Open `localhost:8000`
