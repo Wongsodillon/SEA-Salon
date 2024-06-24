@@ -1,5 +1,3 @@
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import { Link } from '@inertiajs/react';
 import { useState } from 'react';
 import Login from './Login';
 import Register from './Register';
