@@ -40,7 +40,7 @@ export default function Register({ changePage }: { changePage: (index: number) =
                         name="name"
                         value={data.name}
                         className="mt-1"
-                        placeholder='Full Name'
+                        placeholder='John Doe'
                         onChange={(e) => setData('name', e.target.value)}
                     />
 
@@ -54,19 +54,19 @@ export default function Register({ changePage }: { changePage: (index: number) =
                         name="email"
                         value={data.email}
                         className="mt-1"
-                        placeholder='Email'
+                        placeholder='johndoe@example.com'
                         onChange={(e) => setData('email', e.target.value)}
                     />
 
                     <InputError message={errors.email} className="mt-2" />
                 </div>
                 <div className="mt-2">
-                    <InputLabel className='text-white' htmlFor="phone_number" value="phone_number" />
+                    <InputLabel className='text-white' htmlFor="phone_number" value="Phone Number" />
                     <Input
                         name="phone_number"
                         value={data.phone_number}
                         className="mt-1"
-                        placeholder='Phone Number'
+                        placeholder='08XXXXXXXXXX'
                         onChange={(e) => setData('phone_number', e.target.value)}
                     />
 
@@ -80,7 +80,7 @@ export default function Register({ changePage }: { changePage: (index: number) =
                         name="password"
                         value={data.password}
                         className="mt-1"
-                        placeholder='Passwords'
+                        placeholder='Password'
                         onChange={(e) => setData('password', e.target.value)}
                     />
 

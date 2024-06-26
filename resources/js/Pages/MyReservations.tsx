@@ -4,6 +4,7 @@ import ReservationCard from "@/Components/ReservationCard";
 import { Button } from "@/Components/ui/button";
 import MainLayout from "@/Layouts/MainLayout";
 import { PageProps, Reservation } from "@/types";
+import { Link } from "@inertiajs/react";
 import { useState } from "react";
 
 type MyReservationProps = PageProps & {
@@ -36,13 +37,14 @@ const MyReservations = ({ auth, upcoming_reservations, past_reservations }: MyRe
                 </div>
                 {upcoming_reservations.length === 0 && <p className="text-lg">You have no upcoming reservations</p>}
                 <br />
-                <p className="text-3xl font-medium">Your past reservations</p>
+                <p className="text-3xl font-medium">Your past reservations</p> 
                 <br />
                 <div className="flex flex-col gap-8">
                     {past_reservations.map(reservation => (
                         <ReservationCard key={reservation.id} reservation={reservation} upcoming={false} />
                     ))}
                 </div>
+                {past_reservations.length === 0 && <p className="text-lg">You have no past reservations</p>}
                 <br />
             </div>
             {selectedReservation && <CancelReservationModal show={showModal} onClose={() => setShowModal(false)} reservation={selectedReservation} />}

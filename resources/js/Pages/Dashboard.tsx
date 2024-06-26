@@ -134,6 +134,7 @@ export default function Dashboard({ auth, services, reviews }: DashboardProps) {
                     </div>
                 </div>
             </div>
+            <br /><br />
         </MainLayout>
     );
 }

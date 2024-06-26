@@ -7,8 +7,8 @@ const Carousel = () => {
     const [current, setCurrent] = useState(0);
     const images = [
         "https://firebasestorage.googleapis.com/v0/b/dahoster-31a29.appspot.com/o/images%2Fphoto-1633681926035-ec1ac984418a.avif?alt=media&token=fd917834-e337-452a-b172-58976293e57e",
-        "https://firebasestorage.googleapis.com/v0/b/dahoster-31a29.appspot.com/o/images%2Fphoto-1580618672591-eb180b1a973f.avif?alt=media&token=d93938da-509e-4dfc-b18c-a98fb148f5c9",
-        "https://firebasestorage.googleapis.com/v0/b/dahoster-31a29.appspot.com/o/images%2Fphoto-1629397685944-7073f5589754.avif?alt=media&token=6aa82964-5175-4687-a4f0-183fe5c760b4"
+        "https://firebasestorage.googleapis.com/v0/b/dahoster-31a29.appspot.com/o/images%2Fphoto-1629397685944-7073f5589754.avif?alt=media&token=6aa82964-5175-4687-a4f0-183fe5c760b4",
+        "https://firebasestorage.googleapis.com/v0/b/dahoster-31a29.appspot.com/o/images%2Fpexels-photo-3992861.webp?alt=media&token=876814c8-b9b5-42e8-8674-5e16712e88f7"
     ];
 
     const containerRef = useRef<HTMLDivElement>(null);
@@ -39,7 +39,7 @@ const Carousel = () => {
         <div className="overflow-hidden select-none relative">
             <div ref={containerRef} className="flex max-h-[44rem] transition-all duration-1000 ease-out">
                 {images.map((img, index) => (
-                    <img key={index} src={img} alt="error" className="w-full object-cover min-h-screen md:h-full brightness-75" />
+                    <img key={index} src={img} alt="error" className="min-w-full object-cover min-h-screen md:h-full brightness-75" />
                 ))}
             </div>
             <div className="absolute inset-0 flex flex-col items-center gap-6 justify-center animate-reveal">

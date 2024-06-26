@@ -174,6 +174,69 @@ class ServiceDetailSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now(),
         ]);
-
+        ServiceDetails::create([
+            'service_id' => 2,
+            'branch_id' => 5,
+            'price' => 150000,
+            'duration' => 1.5,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        ServiceDetails::create([
+            'service_id' => 3,
+            'branch_id' => 5,
+            'price' => 200000,
+            'duration' => 2,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        ServiceDetails::create([
+            'service_id' => 4,
+            'branch_id' => 5,
+            'price' => 150000,
+            'duration' => 1.5,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        ServiceDetails::create([
+            'service_id' => 6,
+            'branch_id' => 5,
+            'price' => 200000,
+            'duration' => 2,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        ServiceDetails::create([
+            'service_id' => 1,
+            'branch_id' => 6,
+            'price' => 100000,
+            'duration' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        ServiceDetails::create([
+            'service_id' => 2,
+            'branch_id' => 6,
+            'price' => 150000,
+            'duration' => 1.5,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        ServiceDetails::create([
+            'service_id' => 4,
+            'branch_id' => 6,
+            'price' => 200000,
+            'duration' => 2,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        ServiceDetails::create([
+            'service_id' => 6,
+            'branch_id' => 6,
+            'price' => 150000,
+            'duration' => 1.5,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 }
