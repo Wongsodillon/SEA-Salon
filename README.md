@@ -19,6 +19,10 @@ Enter Project Directory
 cd SEA-Salon
 ```
 
+Open XAMPP and start apache and mysql
+
+Create the .env file by copying the .env.example
+
 Run These Commands
 - Run `composer install`
 - Run `php artisan migrate:fresh --seed`
