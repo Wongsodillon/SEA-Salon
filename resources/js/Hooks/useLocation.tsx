@@ -12,6 +12,7 @@ const useLocation = () => {
                     const response = await fetch(`https://api.opencagedata.com/geocode/v1/json?key=780c7f4621dc4d36bbb2cd0883aeb58a&language=en&pretty=1&q=${latitude}+${longitude}`);
                     if (response.ok) {
                         const data = await response.json();
+                        console.log(data.results[0].components);
                         setSelectedProvince(data.results[0].components.state);
                     } else {
                         console.error('Error fetching data:', response.statusText);

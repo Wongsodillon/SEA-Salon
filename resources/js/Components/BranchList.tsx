@@ -30,7 +30,7 @@ const BranchList = ({ branches, loading, onClick, selectedBrach, province }: Bra
             )}
             {branches && branches.length === 0 && (
                 <div className="col-span-2 lg:col-span-4 md:col-span-2 mt-16">
-                    <p className="text-muted-foreground text-center text-2xl">No branches available in {province}</p>
+                    <p className="text-muted-foreground text-center text-2xl">No branches available in your location</p>
                 </div>
             )}
         </div>
